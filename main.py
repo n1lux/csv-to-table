@@ -18,7 +18,9 @@ def import_csv_to_db(db: DB, table_name: str, csv_file_name: str):
 if __name__ == "__main__":
     db = DB(DB_NAME)
     # define (table_name, csv file name)
-    items = (("cidade_uf_atualizado", "cidade_uf_atualizado.csv"),)
+    items = (
+        ("atualizaram_endereco_formulario_2", "atualizaram_endereco_formulario_2.csv"),
+    )
 
     for (table_name, csv_file_name) in items:
         import_csv_to_db(db, table_name, csv_file_name)
